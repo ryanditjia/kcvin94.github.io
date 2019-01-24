@@ -9,6 +9,8 @@ https://kcvin94.github.io/
 - **Gatsby**
 - **React**
 - **VS Code**
+- **Styled-Components**
+- **Typography**
 
 ## Stuff for me :U
 
