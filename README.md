@@ -9,9 +9,10 @@ https://kcvin94.github.io/
 - **Gatsby**
 - **React**
 - **VS Code**
-- **Styled-Components**
+- **Emotion**
 - **Typography**
 
 ## Stuff for me :U
 
 `gatsby develop`
+`npm run deploy`
