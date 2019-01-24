@@ -1,3 +1,6 @@
-import React from "react"
+import React from "react";
+import Home from './home';
 
-export default () => <div>Test test test</div>
+export default () => (
+  <Home />
+);

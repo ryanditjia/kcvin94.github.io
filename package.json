@@ -13,14 +13,13 @@
     "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "dependencies": {
-    "babel-plugin-styled-components": "^1.10.0",
+    "@emotion/core": "^10.0.6",
     "gatsby": "^2.0.95",
-    "gatsby-plugin-styled-components": "^3.0.4",
+    "gatsby-plugin-emotion": "^4.0.1",
     "gatsby-plugin-typography": "^2.2.5",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-typography": "^0.16.18",
-    "styled-components": "^4.1.3",
     "typography": "^0.16.18"
   },
   "repository": {
