@@ -1,3 +1,6 @@
 module.exports = {
-  plugins: [`gatsby-plugin-styled-components`, `gatsby-plugin-typography`],
-},
+  plugins: [
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-typography`,
+  ],
+}
