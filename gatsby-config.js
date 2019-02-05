@@ -5,5 +5,6 @@ module.exports = {
       options: {},
     },
     `gatsby-plugin-typography`,
+    'gatsby-plugin-resolve-src',
   ],
 }

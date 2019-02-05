@@ -4,6 +4,6 @@ import { Layout } from "../../components";
 
 export default () => (
   <Layout>
-    Home <Link to="/test">go to test</Link>
+    <Link to="/test">Kevin Nguyen</Link>
   </Layout>
 );
