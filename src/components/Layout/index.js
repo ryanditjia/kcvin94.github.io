@@ -1,9 +1,9 @@
 import * as React from "react";
-import { LayoutWrapperStyle, LayoutContentWrapperStyle } from "./style";
+import { LayoutWrapperStyle } from "./style";
 
 const Layout = ({ children }) => (
   <div css={LayoutWrapperStyle}>
-    <div css={LayoutContentWrapperStyle}>{children}</div>
+    {children}
   </div>
 );
 
