@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import { colors, borderRadiuses, shadows } from 'style';
+import { colors } from 'styles/common';
 
 export const LayoutWrapperStyle = css`
   position: relative;

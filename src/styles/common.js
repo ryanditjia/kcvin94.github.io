@@ -8,5 +8,5 @@ export const borderRadiuses = {
 };
 
 export const shadows = {
-  CONTAINER: 'box-shadow: 0 5px 50px rgba(0, 0, 0, 0.3)',
+  HEADER: 'box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1)',
 };

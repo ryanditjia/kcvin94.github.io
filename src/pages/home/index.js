@@ -1,9 +1,15 @@
-import React from "react";
-import { Link } from "gatsby";
-import { Layout } from "../../components";
+import * as React from "react";
+import { Layout, Navbar } from "../../components";
 
-export default () => (
-  <Layout>
-    <Link to="/test">Kevin Nguyen</Link>
-  </Layout>
-);
+class Home extends React.Component {
+  render() {
+    return (
+      <Layout>
+        <Navbar>Hello</Navbar>
+        Kevin Nguyen
+      </Layout>
+    );
+  }
+}
+
+export default Home;
