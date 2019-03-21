@@ -8,8 +8,7 @@ export const LayoutWrapperStyle = css`
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background-color: ${colors.WHITE};
+  background-color: ${colors.OFF_WHITE};
   overflow-x: hidden;
   overflow-y: auto;
-  padding: 50px 0 0 0;
 `;

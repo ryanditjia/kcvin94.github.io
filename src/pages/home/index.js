@@ -1,12 +1,11 @@
-import * as React from "react";
-import { Layout, Navbar } from "../../components";
+import * as React from 'react';
+import { Layout, Logo } from '../../components';
 
 class Home extends React.Component {
-  render() {
+  render () {
     return (
       <Layout>
-        <Navbar>Hello</Navbar>
-        Kevin Nguyen
+        <Logo scale={0.5} />
       </Layout>
     );
   }
