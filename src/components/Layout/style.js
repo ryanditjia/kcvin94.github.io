@@ -8,7 +8,7 @@ export const LayoutWrapperStyle = css`
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background-color: ${colors.OFF_WHITE};
+  background: radial-gradient(${colors.WHITE}, ${colors.OFF_WHITE});
   overflow-x: hidden;
   overflow-y: auto;
 `;
