@@ -1,11 +1,16 @@
 import * as React from 'react';
-import { Layout, Logo } from '../../components';
+import { Container, Layout, Logo } from '../../components';
 
 class Home extends React.Component {
   render () {
     return (
       <Layout>
-        <Logo scale={0.5} />
+        <Container>
+          <Logo scale={0.5} />
+        </Container>
+        <Container>
+          Content
+        </Container>
       </Layout>
     );
   }

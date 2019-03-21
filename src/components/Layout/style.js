@@ -4,8 +4,7 @@ import { colors } from 'styles/common';
 export const LayoutWrapperStyle = css`
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
   background: radial-gradient(${colors.WHITE}, ${colors.OFF_WHITE});
