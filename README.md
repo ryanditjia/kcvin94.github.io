@@ -14,5 +14,5 @@ https://kcvin94.github.io/
 
 ## Stuff for me :U
 
-`gatsby develop`
+`yarn develop`
 `npm run deploy`
