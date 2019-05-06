@@ -11,6 +11,7 @@ https://kcvin94.github.io/
 - **VS Code**
 - **Emotion**
 - **Typography**
+- **Typescript**
 
 ## Stuff for me :U
 

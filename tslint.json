@@ -1,0 +1,14 @@
+{
+  "extends": ["tslint:latest", "tslint-react"],
+  "rules": {
+    "prettier": true,
+    "jsx-no-multiline-js": false,
+    "jsx-no-lambda": false,
+    "import-name": false,
+    "no-boolean-literal-compare": false,
+    "interface-name": [true, "never-prefix"],
+    "quotemark": [true, "single", "jsx-single"],
+    "no-angle-bracket-type-assertion": true,
+    "ordered-imports": false
+  }
+}

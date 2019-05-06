@@ -6,10 +6,10 @@ class Home extends React.Component {
     return (
       <Layout>
         <Container>
-          <Logo scale={0.5} />
+          Game
         </Container>
         <Container>
-          Content
+          <Logo scale={0.5} />
         </Container>
       </Layout>
     );

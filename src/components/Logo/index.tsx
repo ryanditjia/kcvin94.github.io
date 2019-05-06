@@ -8,10 +8,18 @@ import {
   NWrapperStyle,
   N1Style,
   N2Style,
-  N3Style
+  N3Style,
 } from './style';
 
-const Logo = ({ scale }) => (
+interface Props {
+  scale?: number;
+}
+
+const defaultProps = {
+  scale: 1,
+};
+
+const Logo = ({ scale }: Props) => (
   <div css={LogoWrapperStyle}>
     <div css={KWrapperStyle}>
       <div css={K3Style(scale)} />
@@ -26,8 +34,6 @@ const Logo = ({ scale }) => (
   </div>
 );
 
-Logo.defaultProps = {
-  scale: 1
-};
+Logo.defaultProps = defaultProps;
 
 export default Logo;
