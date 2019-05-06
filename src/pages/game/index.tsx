@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Container, Layout } from 'components';
 import { GameWrapperStyle, UserWrapperStyle } from './style';
 
 const KEY_W = 87;
@@ -9,14 +10,24 @@ const KEY_D = 68;
 class Game extends React.Component {
   state = {
     userLocation: [1, 1],
+    tempClick: [0, 0],
   };
 
   componentDidMount () {
     document.addEventListener('keydown', this.handleUserMove);
+    document.addEventListener('mousedown', this.handleBasicAttack);
   }
 
   componentWillUnmount () {
     document.removeEventListener('keydown', this.handleUserMove);
+    document.removeEventListener('mousedown', this.handleBasicAttack);
+  }
+
+  getSnapshotBeforeUpdate (prevProps, prevState) {
+    if (prevState.tempClick !== this.state.tempClick) {
+      console.log(this.state.tempClick);
+    }
+    return null;
   }
 
   handleUserMove = (event: Event) => {
@@ -40,20 +51,30 @@ class Game extends React.Component {
     }
   };
 
+  handleBasicAttack = (event: Event) => {
+    const { tempClick } = this.state;
+
+    this.setState({ tempClick: [event.x, event.y] });
+  };
+
   render () {
     const { userLocation } = this.state;
 
     return (
-      <div css={GameWrapperStyle}>
-        <div
-          css={UserWrapperStyle({
-            xLocation: userLocation[0],
-            yLocation: userLocation[1],
-          })}
-        >
-          :)
-        </div>
-      </div>
+      <Layout>
+        <Container>
+          <div css={GameWrapperStyle}>
+            <div
+              css={UserWrapperStyle({
+                xLocation: userLocation[0],
+                yLocation: userLocation[1],
+              })}
+            >
+              :)
+            </div>
+          </div>
+        </Container>
+      </Layout>
     );
   }
 }

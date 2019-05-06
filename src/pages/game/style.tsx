@@ -24,3 +24,16 @@ export const UserWrapperStyle = ({
   background-color: red;
   grid-area: ${yLocation} / ${xLocation} / ${yLocation + 1} / ${xLocation + 1};
 `;
+
+interface TempClickProps {
+  xLocation: number;
+  yLocation: number;
+}
+
+export const TempClickStyle = ({
+  xLocation,
+  yLocation,
+}: TempClickProps) => css`
+  background-color: blue;
+  grid-area: ${yLocation} / ${xLocation} / ${yLocation + 1} / ${xLocation + 1};
+`;

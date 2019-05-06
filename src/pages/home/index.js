@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Game from 'game';
+import { Link } from 'gatsby';
 import { Container, Layout, Logo } from 'components';
 
 class Home extends React.Component {
@@ -7,10 +7,10 @@ class Home extends React.Component {
     return (
       <Layout>
         <Container>
-          <Game />
+          <Logo scale={0.5} />
         </Container>
         <Container>
-          <Logo scale={0.5} />
+          <Link to="/game">Play a game :)</Link>
         </Container>
       </Layout>
     );
