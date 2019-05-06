@@ -1,12 +1,13 @@
 import * as React from 'react';
-import { Container, Layout, Logo } from '../../components';
+import Game from 'game';
+import { Container, Layout, Logo } from 'components';
 
 class Home extends React.Component {
   render () {
     return (
       <Layout>
         <Container>
-          Game
+          <Game />
         </Container>
         <Container>
           <Logo scale={0.5} />
