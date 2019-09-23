@@ -792,8 +792,8 @@ const PTEROSAUR = {
   name: 'Pterosaur',
   image: Pterosaur,
   rarity: UNCOMMON,
-  region: [GORGE],
-  type: FLYING_WINGS,
+  region: [COAST],
+  type: AGILE,
   oneStar: [
     {
       attribute: HP,
