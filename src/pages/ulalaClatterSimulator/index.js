@@ -1,7 +1,7 @@
 import * as React from 'react';
-import ClatterPicker from './components/ClatterPicker';
-import ClatterCard from './components/ClatterCard';
-import ClatterResults from './components/ClatterResults';
+import ClatterPicker from 'components/ulalaComponents/components/ClatterPicker';
+import ClatterCard from 'components/ulalaComponents/components/ClatterCard';
+import ClatterResults from 'components/ulalaComponents/components/ClatterResults';
 import {
   AppWrapperStyle,
   HeaderWrapperStyle,
