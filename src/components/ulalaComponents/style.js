@@ -38,7 +38,7 @@ export const BodyWrapperStyle = css`
 export const HeaderWrapperStyle = css`
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 20px;
 `;
 
 export const ClatterCardsWrapperStyle = css`

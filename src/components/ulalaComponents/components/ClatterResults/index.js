@@ -1,6 +1,10 @@
 import Label from '../Label';
 import Display from '../Display';
-import { getAttributeCalculations, getAttributeColor, formatNumber } from '../../helpers';
+import {
+  getAttributeCalculations,
+  getAttributeColor,
+  formatNumber,
+} from '../../helpers';
 import {
   ATTRIBUTES,
   ATK,
@@ -18,17 +22,21 @@ const ClatterResults = ({ clatterData }) => {
 
   return (
     <div css={ClatterResultsWrapperStyle}>
+      <Display align="center" fontSize={24}>Results</Display>
+
       {ATTRIBUTES.map(attributeKey => {
-        return (
-          <div css={AttributeWrapperStyle}>
-            <Label color={getAttributeColor(attributeKey)}>
-              {attributeKey}
-            </Label>
-            <Display color={getAttributeColor(attributeKey)}>
-              {formatNumber(totalAttributes[attributeKey])}
-            </Display>
-          </div>
-        );
+        if (totalAttributes[attributeKey] > 0) {
+          return (
+            <div css={AttributeWrapperStyle}>
+              <Label align="center" color={getAttributeColor(attributeKey)}>
+                {attributeKey}
+              </Label>
+              <Display align="center" color={getAttributeColor(attributeKey)} fontSize={20}>
+                {formatNumber(totalAttributes[attributeKey])}
+              </Display>
+            </div>
+          );
+        }
       })}
     </div>
   );
