@@ -28,6 +28,7 @@ export const MiniClatterCardWrapperStyle = css`
 export const ImageStyle = css`
   height: 120px;
   object-fit: contain;
+  margin: 0;
 `;
 
 export const HoverLabelStyle = css`

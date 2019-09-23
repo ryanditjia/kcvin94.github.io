@@ -6,6 +6,7 @@ import {
   AppWrapperStyle,
   HeaderWrapperStyle,
   ClatterCardsWrapperStyle,
+  PlaceholderCardStyle,
 } from 'components/ulalaComponents/style';
 
 class UlalaClatterSimulator extends React.Component {
@@ -51,6 +52,10 @@ class UlalaClatterSimulator extends React.Component {
 
   render () {
     const { clatterData } = this.state;
+    const placeholders = [];
+    for (let i = clatterData.length + 1; i < 10; i++) {
+      placeholders.push(i);
+    }
 
     return (
       <div css={AppWrapperStyle}>
@@ -68,6 +73,9 @@ class UlalaClatterSimulator extends React.Component {
                 }
               />
             );
+          })}
+          {placeholders.map(number => {
+            return <div css={PlaceholderCardStyle}>{number}</div>;
           })}
         </div>
 

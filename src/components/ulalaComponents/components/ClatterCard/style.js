@@ -12,6 +12,9 @@ export const ClatterCardWrapperStyle = css`
   background-color: #fff;
   justify-items: center;
   padding: 100px 20px 15px 20px;
+  margin: 30px;
+  height: 295px;
+  flex-shrink: 0;
 `;
 
 export const DeleteButtonStyle = css`

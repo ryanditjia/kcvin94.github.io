@@ -1,7 +1,7 @@
 import { css } from '@emotion/core';
 
 export const ClatterResultsWrapperStyle = css`
-  width: 200px;
-  background-color: orange;
+  width: 25vw;
+  min-width: 300px;
   overflow: overlay;
 `;
