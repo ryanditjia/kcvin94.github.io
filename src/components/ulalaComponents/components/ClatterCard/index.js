@@ -31,6 +31,27 @@ const ClatterCard = ({ clatter, deleteClatter, chooseStar }) => {
 
       <img src={image} css={ImageStyle} />
 
+      <div css={StarButtonsWrapperStyle}>
+        <button
+          onClick={() => chooseStar('oneStar')}
+          css={StarButtonStyle(star === 'oneStar')}
+        >
+          🟊
+        </button>
+        <button
+          onClick={() => chooseStar('twoStar')}
+          css={StarButtonStyle(star === 'twoStar')}
+        >
+          🟊🟊
+        </button>
+        <button
+          onClick={() => chooseStar('threeStar')}
+          css={StarButtonStyle(star === 'threeStar')}
+        >
+          🟊🟊🟊
+        </button>
+      </div>
+
       <Display align="center" fontSize={18}>
         {name}
       </Display>
@@ -52,27 +73,6 @@ const ClatterCard = ({ clatter, deleteClatter, chooseStar }) => {
         <div css={InfoWrapperStyle}>
           <img src={getTypeImage(type)} css={IconImageStyle} />
           <Display>{type}</Display>
-        </div>
-
-        <div css={StarButtonsWrapperStyle}>
-          <button
-            onClick={() => chooseStar('oneStar')}
-            css={StarButtonStyle(star === 'oneStar')}
-          >
-            🟊
-          </button>
-          <button
-            onClick={() => chooseStar('twoStar')}
-            css={StarButtonStyle(star === 'twoStar')}
-          >
-            🟊🟊
-          </button>
-          <button
-            onClick={() => chooseStar('threeStar')}
-            css={StarButtonStyle(star === 'threeStar')}
-          >
-            🟊🟊🟊
-          </button>
         </div>
 
         <div css={InfoWrapperStyle}>

@@ -1,4 +1,5 @@
 import { css } from '@emotion/core';
+import { BLACK } from '../../colors';
 
 export const ClatterResultsWrapperStyle = css`
   width: 25vw;
@@ -11,8 +12,16 @@ export const ClatterResultsWrapperStyle = css`
   padding: 20px;
 `;
 
-export const AttributeWrapperStyle = css`
+export const InfoWrapperStyle = css`
   display: flex;
   flex-direction: column;
   width: 100%;
+`;
+
+export const DescriptionStyle = css`
+  width: 100%;
+  font-size: 20px;
+  color: ${BLACK};
+  font-weight: 500;
+  text-align: center;
 `;

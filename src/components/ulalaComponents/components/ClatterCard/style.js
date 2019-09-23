@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import { RED, GOLD } from '../../colors';
+import { RED, YELLOW } from '../../colors';
 
 export const ClatterCardWrapperStyle = css`
   position: relative;
@@ -78,24 +78,27 @@ export const IconImageStyle = css`
 `;
 
 export const StarButtonsWrapperStyle = css`
+  position: absolute;
+  left: 0;
+  top: 0;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 `;
 
 export const StarButtonStyle = isActive => css`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 40px;
-  font-size: 20px;
+  width: 75px;
+  height: 30px;
+  font-size: 26px;
   border: none;
   background: none;
   outline: none;
   transition: all 0.2s linear;
   ${isActive
     ? `
-    color: ${GOLD};
+    color: ${YELLOW};
   `
     : `
     color: rgba(0, 0, 0, 0.2);

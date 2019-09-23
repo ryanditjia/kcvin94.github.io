@@ -6,3 +6,4 @@ export const GOLD = '#ff9900';
 export const RED = '#ff0000';
 export const GRAY = '#999999';
 export const PINK = '#ff00ff';
+export const YELLOW = '#eed910';

@@ -30,6 +30,8 @@ import {
   CRIT,
   TENACITY,
   BLOCK,
+  REGION_DESCRIPTIONS,
+  REGIONS,
 } from './constants';
 import Plain from './media/Plain.png';
 import RainForest from './media/RainForest.png';
@@ -108,7 +110,54 @@ export const getAttributeColor = attribute => {
   return color;
 };
 
-export const getAttributeCalculations = clatterData => {
+const addUniqueToArray = (array, item) => {
+  if (!array.some(i => i === item)) {
+    array.push(item);
+  }
+};
+
+const getRegionResult = (uniqueArray, regionKey) => {
+  if (uniqueArray.length > 0) {
+    for (let i = uniqueArray.length; i > 0; i -= 1) {
+      const region = REGION_DESCRIPTIONS[regionKey];
+
+      if (region[i]) {
+        return {
+          descriptions: region.description,
+          values: region[i],
+        };
+      }
+    }
+  }
+  return null;
+};
+
+export const getCalculations = clatterData => {
+  // Attribute variables
+  let totalPlain = [];
+  let totalGorge = [];
+  let totalSnowMountain = [];
+  let totalOasis = [];
+  let totalWoodland = [];
+  let totalVolcano = [];
+  let totalDesert = [];
+  let totalRainForest = [];
+  let totalCoast = [];
+  let totalMountainRange = [];
+
+  // Attribute descriptions
+  let plainResult = null;
+  let gorgeResult = null;
+  let snowMountainResult = null;
+  let oasisResult = null;
+  let woodlandResult = null;
+  let volcanoResult = null;
+  let desertResult = null;
+  let rainForestResult = null;
+  let coastResult = null;
+  let mountainRangeResult = null;
+
+  // Attribute variables
   let totalAttack = 0;
   let totalCrit = 0;
   let totalImpale = 0;
@@ -118,6 +167,32 @@ export const getAttributeCalculations = clatterData => {
   let totalTenacity = 0;
 
   clatterData.forEach(clatter => {
+    const { region } = clatter;
+
+    // Calculate region
+    region.forEach(singleRegion => {
+      if (singleRegion === PLAIN) addUniqueToArray(totalPlain, clatter.id);
+      else if (singleRegion === GORGE) addUniqueToArray(totalGorge, clatter.id);
+      else if (singleRegion === SNOW_MOUNTAIN) {
+        addUniqueToArray(totalSnowMountain, clatter.id);
+      } else if (singleRegion === OASIS) {
+        addUniqueToArray(totalOasis, clatter.id);
+      } else if (singleRegion === WOODLAND) {
+        addUniqueToArray(totalWoodland, clatter.id);
+      } else if (singleRegion === VOLCANO) {
+        addUniqueToArray(totalVolcano, clatter.id);
+      } else if (singleRegion === DESERT) {
+        addUniqueToArray(totalDesert, clatter.id);
+      } else if (singleRegion === RAIN_FOREST) {
+        addUniqueToArray(totalRainForest, clatter.id);
+      } else if (singleRegion === COAST) {
+        addUniqueToArray(totalCoast, clatter.id);
+      } else if (singleRegion === MOUNTAIN_RANGE) {
+        addUniqueToArray(totalMountainRange, clatter.id);
+      }
+    });
+
+    // Calculate attributes
     clatter[clatter.star].forEach(({ attribute, value }) => {
       if (attribute === ATK) totalAttack += value;
       else if (attribute === HP) totalHP += value;
@@ -129,7 +204,31 @@ export const getAttributeCalculations = clatterData => {
     });
   });
 
+  // Place correct message for region
+  REGIONS.forEach(region => {
+    plainResult = getRegionResult(totalPlain, PLAIN);
+    gorgeResult = getRegionResult(totalGorge, GORGE);
+    snowMountainResult = getRegionResult(totalSnowMountain, SNOW_MOUNTAIN);
+    oasisResult = getRegionResult(totalOasis, OASIS);
+    woodlandResult = getRegionResult(totalWoodland, WOODLAND);
+    volcanoResult = getRegionResult(totalVolcano, VOLCANO);
+    desertResult = getRegionResult(totalDesert, DESERT);
+    rainForestResult = getRegionResult(totalRainForest, RAIN_FOREST);
+    coastResult = getRegionResult(totalCoast, COAST);
+    mountainRangeResult = getRegionResult(totalMountainRange, MOUNTAIN_RANGE);
+  });
+
   return {
+    [PLAIN]: plainResult,
+    [GORGE]: gorgeResult,
+    [SNOW_MOUNTAIN]: snowMountainResult,
+    [OASIS]: oasisResult,
+    [WOODLAND]: woodlandResult,
+    [VOLCANO]: volcanoResult,
+    [DESERT]: desertResult,
+    [RAIN_FOREST]: rainForestResult,
+    [COAST]: coastResult,
+    [MOUNTAIN_RANGE]: mountainRangeResult,
     [ATK]: totalAttack,
     [CRIT]: totalCrit,
     [IMPALE]: totalImpale,

@@ -80,6 +80,70 @@ export const REGIONS = [
   MOUNTAIN_RANGE,
 ];
 
+// Region Descriptions
+export const REGION_DESCRIPTIONS = {
+  [PLAIN]: {
+    description: ['While entering the battlefield, the Plain card will cause '],
+    2: ['ATK +20%'],
+    4: ['ATK +40%'],
+    6: ['ATK +60%'],
+  },
+  [GORGE]: {
+    description: ['While entering the battlefield, the Gorge card will cause '],
+    2: ['HP +20%'],
+    4: ['HP +40%'],
+  },
+  [SNOW_MOUNTAIN]: {
+    description: ['Team mates with HP below ', ', '],
+    2: ['25%', 'Healing +8%'],
+    4: ['25%', 'Healing +16%'],
+  },
+  [OASIS]: {
+    description: ['Enemy units with HP below ', ', basic attack '],
+    2: ['15%', 'DMG +35%'],
+    4: ['25%', 'DMG +60%'],
+  },
+  [WOODLAND]: {
+    description: ['While entering the battlefield, '],
+    2: ['Impale +600'],
+    4: ['Impale +1200'],
+  },
+  [VOLCANO]: {
+    description: ['While entering the battlefield '],
+    2: ['CRIT +600'],
+    4: ['CRIT +1200'],
+    6: ['CRIT +1800'],
+  },
+  [DESERT]: {
+    description: [
+      'When HP is lower than ',
+      ', ',
+      ' for 4 seconds (triggers once per battle)',
+    ],
+    3: ['25%', 'DMG taken reduces 50%'],
+  },
+  [RAIN_FOREST]: {
+    description: [
+      'While entering the battlefield, the Rain Forest card ',
+      '. When HP falls below 25%, heal ',
+      ' of the pet Symbosis within 3 seconds. (It can be triggered once per battle)',
+    ],
+    2: ['HP +12%', '40%'],
+    4: ['HP +24%', '80%'],
+  },
+  [COAST]: {
+    description: ['While entering the battlefield, '],
+    2: ['Crit +300 and Impale +300'],
+    4: ['Crit +600 and Impale +600'],
+  },
+  [MOUNTAIN_RANGE]: {
+    description: [
+      'If only 1 kind of Mountain Range card is equipped, basic attack ',
+    ],
+    1: ['DMG +5%'],
+  },
+};
+
 // Types
 export const GIANT_JAW = 'Giant Jaw';
 export const HARD_SHELL = 'Hard Shell';

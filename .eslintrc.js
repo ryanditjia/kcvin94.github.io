@@ -19,7 +19,7 @@ module.exports = {
 
     // options to emulate prettier setup
     semi: ["error", "always"],
-    "max-len": ["error", { code: 140 }],
+    "max-len": ["error", { code: 200 }],
     "template-curly-spacing": ["error", "never"],
     "arrow-parens": ["error", "as-needed"],
 
@@ -42,6 +42,9 @@ module.exports = {
     // react plugin - options
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
+
+    // mine
+    "no-template-curly-in-string": "off",
   },
   parser: "babel-eslint",
   parserOptions: {
