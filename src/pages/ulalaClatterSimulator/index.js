@@ -2,8 +2,10 @@ import * as React from 'react';
 import ClatterPicker from 'components/ulalaComponents/components/ClatterPicker';
 import ClatterCard from 'components/ulalaComponents/components/ClatterCard';
 import ClatterResults from 'components/ulalaComponents/components/ClatterResults';
+import Display from 'components/ulalaComponents/components/Display';
 import {
   AppWrapperStyle,
+  BodyWrapperStyle,
   HeaderWrapperStyle,
   ClatterCardsWrapperStyle,
   PlaceholderCardStyle,
@@ -59,24 +61,35 @@ class UlalaClatterSimulator extends React.Component {
 
     return (
       <div css={AppWrapperStyle}>
-        <div css={HeaderWrapperStyle}>Ulala Clatter Card Simulator</div>
         <ClatterPicker addClatter={this.addClatter} />
 
-        <div css={ClatterCardsWrapperStyle}>
-          {clatterData.map((clatter, index) => {
-            return (
-              <ClatterCard
-                clatter={clatter}
-                deleteClatter={() => this.deleteClatter(index)}
-                chooseStar={starChoice =>
-                  this.chooseStar(clatter, index, starChoice)
-                }
-              />
-            );
-          })}
-          {placeholders.map(number => {
-            return <div css={PlaceholderCardStyle}>{number}</div>;
-          })}
+        <div css={BodyWrapperStyle}>
+          <div css={HeaderWrapperStyle}>
+            <Display align="center" fontSize={24}>Ulala Clatter Card Simulator V.0</Display>{' '}
+            <Display align="center" fontSize={14} color="rgba(0, 0, 0, 0.5)">
+              By Delighte & Jelighte (NA Server 1 Allosaurus)
+            </Display>
+            <Display align="center" fontSize={12} color="rgba(0, 0, 0, 0.3)">
+              Last Updated: Sep 23, 2019
+            </Display>
+          </div>
+
+          <div css={ClatterCardsWrapperStyle}>
+            {clatterData.map((clatter, index) => {
+              return (
+                <ClatterCard
+                  clatter={clatter}
+                  deleteClatter={() => this.deleteClatter(index)}
+                  chooseStar={starChoice =>
+                    this.chooseStar(clatter, index, starChoice)
+                  }
+                />
+              );
+            })}
+            {placeholders.map(number => {
+              return <div css={PlaceholderCardStyle}>{number}</div>;
+            })}
+          </div>
         </div>
 
         <ClatterResults clatterData={clatterData} />

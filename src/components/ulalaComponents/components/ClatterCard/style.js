@@ -65,7 +65,6 @@ export const RegionsWrapperStyle = css`
 export const InfoWrapperStyle = css`
   display: flex;
   align-items: center;
-  padding: 0 10px 0 0;
   & > img {
     margin: 0 5px 0 0;
   }

@@ -6,7 +6,7 @@ const Label = ({ children, color, align }) => {
 
 Label.defaultProps = {
   color: 'rgba(0, 0, 0, 0.5)',
-  align: 'right',
+  align: 'left',
 };
 
 export default Label;

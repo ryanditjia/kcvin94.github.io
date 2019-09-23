@@ -108,6 +108,38 @@ export const getAttributeColor = attribute => {
   return color;
 };
 
+export const getAttributeCalculations = clatterData => {
+  let totalAttack = 0;
+  let totalCrit = 0;
+  let totalImpale = 0;
+  let totalHP = 0;
+  let totalArmor = 0;
+  let totalBlock = 0;
+  let totalTenacity = 0;
+
+  clatterData.forEach(clatter => {
+    clatter[clatter.star].forEach(({ attribute, value }) => {
+      if (attribute === ATK) totalAttack += value;
+      else if (attribute === HP) totalHP += value;
+      else if (attribute === CRIT) totalCrit += value;
+      else if (attribute === BLOCK) totalBlock += value;
+      else if (attribute === ARMOR) totalArmor += value;
+      else if (attribute === TENACITY) totalTenacity += value;
+      else if (attribute === IMPALE) totalImpale += value;
+    });
+  });
+
+  return {
+    [ATK]: totalAttack,
+    [CRIT]: totalCrit,
+    [IMPALE]: totalImpale,
+    [HP]: totalHP,
+    [ARMOR]: totalArmor,
+    [BLOCK]: totalBlock,
+    [TENACITY]: totalTenacity,
+  };
+};
+
 export const formatNumber = number => {
   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 };

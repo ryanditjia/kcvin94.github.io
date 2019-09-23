@@ -5,3 +5,9 @@ export const ClatterResultsWrapperStyle = css`
   min-width: 300px;
   overflow: overlay;
 `;
+
+export const AttributeWrapperStyle = css`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;

@@ -107,7 +107,7 @@ export const ARMOR = 'ARMOR';
 export const IMPALE = 'IMPALE';
 export const CRIT = 'CRIT';
 export const TENACITY = 'TENACITY';
-export const BLOCK = 'Block';
+export const BLOCK = 'BLOCK';
 export const ATTRIBUTES = [ATK, HP, ARMOR, IMPALE, CRIT, TENACITY, BLOCK];
 
 // Clatter Cards
