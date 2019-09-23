@@ -6,7 +6,7 @@ import {
   AppWrapperStyle,
   HeaderWrapperStyle,
   ClatterCardsWrapperStyle,
-} from './style';
+} from 'components/ulalaComponents/style';
 
 class UlalaClatterSimulator extends React.Component {
   state = {
