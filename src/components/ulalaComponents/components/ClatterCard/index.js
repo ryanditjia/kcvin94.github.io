@@ -18,10 +18,11 @@ import {
   StarButtonsWrapperStyle,
   StarButtonStyle,
   AttributeWrapperStyle,
+  BonusInfoStyle,
 } from './style';
 
 const ClatterCard = ({ clatter, deleteClatter, chooseStar }) => {
-  const { name, image, rarity, region, type, star } = clatter;
+  const { name, image, rarity, region, type, bonus, star } = clatter;
 
   return (
     <div css={ClatterCardWrapperStyle}>
@@ -30,27 +31,6 @@ const ClatterCard = ({ clatter, deleteClatter, chooseStar }) => {
       </button>
 
       <img src={image} css={ImageStyle} />
-
-      <div css={StarButtonsWrapperStyle}>
-        <button
-          onClick={() => chooseStar('oneStar')}
-          css={StarButtonStyle(star === 'oneStar')}
-        >
-          🟊
-        </button>
-        <button
-          onClick={() => chooseStar('twoStar')}
-          css={StarButtonStyle(star === 'twoStar')}
-        >
-          🟊🟊
-        </button>
-        <button
-          onClick={() => chooseStar('threeStar')}
-          css={StarButtonStyle(star === 'threeStar')}
-        >
-          🟊🟊🟊
-        </button>
-      </div>
 
       <Display align="center" fontSize={18}>
         {name}
@@ -75,6 +55,27 @@ const ClatterCard = ({ clatter, deleteClatter, chooseStar }) => {
           <Display>{type}</Display>
         </div>
 
+        <div css={StarButtonsWrapperStyle}>
+          <button
+            onClick={() => chooseStar('oneStar')}
+            css={StarButtonStyle(star === 'oneStar')}
+          >
+            🟊
+          </button>
+          <button
+            onClick={() => chooseStar('twoStar')}
+            css={StarButtonStyle(star === 'twoStar')}
+          >
+            🟊🟊
+          </button>
+          <button
+            onClick={() => chooseStar('threeStar')}
+            css={StarButtonStyle(star === 'threeStar')}
+          >
+            🟊🟊🟊
+          </button>
+        </div>
+
         <div css={InfoWrapperStyle}>
           {clatter[star].map(stat => (
             <div css={AttributeWrapperStyle}>
@@ -87,6 +88,10 @@ const ClatterCard = ({ clatter, deleteClatter, chooseStar }) => {
             </div>
           ))}
         </div>
+
+        {bonus && <div css={BonusInfoStyle}>
+          <Label align="center">BONUS</Label>
+          {bonus}</div>}
       </div>
     </div>
   );

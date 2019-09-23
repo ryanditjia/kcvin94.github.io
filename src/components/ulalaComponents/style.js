@@ -53,7 +53,7 @@ export const PlaceholderCardStyle = css`
   width: 250px;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.1);
-  margin: 30px;
+  margin: 0 20px 100px 20px;
   height: 295px;
   flex-shrink: 0;
   display: flex;

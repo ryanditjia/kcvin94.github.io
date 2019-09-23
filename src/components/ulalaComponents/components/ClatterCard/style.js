@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import { RED, YELLOW } from '../../colors';
+import { RED, YELLOW, BLACK } from '../../colors';
 
 export const ClatterCardWrapperStyle = css`
   position: relative;
@@ -12,7 +12,7 @@ export const ClatterCardWrapperStyle = css`
   background-color: #fff;
   justify-items: center;
   padding: 100px 20px 15px 20px;
-  margin: 30px;
+  margin: 0 20px 100px 20px;
   height: 295px;
   flex-shrink: 0;
 `;
@@ -78,24 +78,23 @@ export const IconImageStyle = css`
 `;
 
 export const StarButtonsWrapperStyle = css`
-  position: absolute;
-  left: 0;
-  top: 0;
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
 `;
 
 export const StarButtonStyle = isActive => css`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 75px;
+  flex: 1;
   height: 30px;
-  font-size: 26px;
+  font-size: 20px;
   border: none;
   background: none;
   outline: none;
   transition: all 0.2s linear;
+  padding: 0;
   ${isActive
     ? `
     color: ${YELLOW};
@@ -113,4 +112,19 @@ export const AttributeWrapperStyle = css`
   display: flex;
   flex-direction: column;
   width: 100%;
+`;
+
+export const BonusInfoStyle = css`
+  position: absolute;
+  left: calc(50% - 115px);
+  top: 280px;
+  width: 230px;
+  font-size: 12px;
+  color: ${BLACK};
+  font-weight: 500;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 0px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 10px;
 `;
