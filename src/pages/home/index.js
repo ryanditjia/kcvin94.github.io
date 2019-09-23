@@ -10,7 +10,7 @@ class Home extends React.Component {
           <Logo scale={0.5} />
         </Container>
         <Container>
-          <Link to="/game">Play a game :)</Link>
+          <Link to="/ulalaClatterSimulator">Ulala Clatter Simulator</Link>
         </Container>
       </Layout>
     );
