@@ -6,17 +6,7 @@ import {
   getAttributeColor,
   formatNumber,
 } from '../../helpers';
-import {
-  ATTRIBUTES,
-  ATK,
-  HP,
-  ARMOR,
-  IMPALE,
-  CRIT,
-  TENACITY,
-  BLOCK,
-  REGIONS,
-} from '../../constants';
+import { ATTRIBUTES, REGIONS, TYPES } from '../../constants';
 import { GREEN } from '../../colors';
 import {
   ClatterResultsWrapperStyle,
@@ -67,6 +57,32 @@ const ClatterResults = ({ clatterData }) => {
                       {region.values.length > index && (
                         <span style={{ color: GREEN }}>
                           {region.values[index]}
+                        </span>
+                      )}
+                    </>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        }
+      })}
+
+      {TYPES.map(typeKey => {
+        const type = totalCalculations[typeKey];
+
+        if (type) {
+          return (
+            <div css={InfoWrapperStyle}>
+              <Label align="center">{typeKey}</Label>
+              <div css={DescriptionStyle}>
+                {type.descriptions.map((description, index) => {
+                  return (
+                    <>
+                      <span>{description}</span>
+                      {type.values.length > index && (
+                        <span style={{ color: GREEN }}>
+                          {type.values[index]}
                         </span>
                       )}
                     </>

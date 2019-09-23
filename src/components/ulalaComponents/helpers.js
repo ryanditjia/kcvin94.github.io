@@ -31,7 +31,7 @@ import {
   TENACITY,
   BLOCK,
   REGION_DESCRIPTIONS,
-  REGIONS,
+  TYPE_DESCRIPTIONS,
 } from './constants';
 import Plain from './media/Plain.png';
 import RainForest from './media/RainForest.png';
@@ -132,8 +132,24 @@ const getRegionResult = (uniqueArray, regionKey) => {
   return null;
 };
 
+const getTypeResult = (uniqueArray, typeKey) => {
+  if (uniqueArray.length > 0) {
+    for (let i = uniqueArray.length; i > 0; i -= 1) {
+      const type = TYPE_DESCRIPTIONS[typeKey];
+
+      if (type[i]) {
+        return {
+          descriptions: type.description,
+          values: type[i],
+        };
+      }
+    }
+  }
+  return null;
+};
+
 export const getCalculations = clatterData => {
-  // Attribute variables
+  // Region variables
   let totalPlain = [];
   let totalGorge = [];
   let totalSnowMountain = [];
@@ -145,7 +161,7 @@ export const getCalculations = clatterData => {
   let totalCoast = [];
   let totalMountainRange = [];
 
-  // Attribute descriptions
+  // Region descriptions
   let plainResult = null;
   let gorgeResult = null;
   let snowMountainResult = null;
@@ -157,6 +173,26 @@ export const getCalculations = clatterData => {
   let coastResult = null;
   let mountainRangeResult = null;
 
+  // Type variables
+  let totalGiantJaw = [];
+  let totalHardShell = [];
+  let totalFlyingWings = [];
+  let totalAgile = [];
+  let totalDeadlyPoison = [];
+  let totalSolidBone = [];
+  let totalSharpClaw = [];
+  let totalFluff = [];
+
+  // Type descriptions
+  let giantJawResult = null;
+  let hardShellResult = null;
+  let flyingWingsResult = null;
+  let agileResult = null;
+  let deadlyPoisonResult = null;
+  let solidBoneResult = null;
+  let sharpClawResult = null;
+  let fluffResult = null;
+
   // Attribute variables
   let totalAttack = 0;
   let totalCrit = 0;
@@ -167,7 +203,7 @@ export const getCalculations = clatterData => {
   let totalTenacity = 0;
 
   clatterData.forEach(clatter => {
-    const { region } = clatter;
+    const { region, type } = clatter;
 
     // Calculate region
     region.forEach(singleRegion => {
@@ -192,6 +228,23 @@ export const getCalculations = clatterData => {
       }
     });
 
+    // Calculate type
+    if (type === GIANT_JAW) addUniqueToArray(totalGiantJaw, clatter.id);
+    else if (type === HARD_SHELL) addUniqueToArray(totalHardShell, clatter.id);
+    else if (type === FLYING_WINGS) {
+      addUniqueToArray(totalFlyingWings, clatter.id);
+    } else if (type === AGILE) {
+      addUniqueToArray(totalAgile, clatter.id);
+    } else if (type === DEADLY_POISON) {
+      addUniqueToArray(totalDeadlyPoison, clatter.id);
+    } else if (type === SOLID_BONE) {
+      addUniqueToArray(totalSolidBone, clatter.id);
+    } else if (type === SHARP_CLAW) {
+      addUniqueToArray(totalSharpClaw, clatter.id);
+    } else if (type === FLUFF) {
+      addUniqueToArray(totalFluff, clatter.id);
+    }
+
     // Calculate attributes
     clatter[clatter.star].forEach(({ attribute, value }) => {
       if (attribute === ATK) totalAttack += value;
@@ -205,18 +258,26 @@ export const getCalculations = clatterData => {
   });
 
   // Place correct message for region
-  REGIONS.forEach(region => {
-    plainResult = getRegionResult(totalPlain, PLAIN);
-    gorgeResult = getRegionResult(totalGorge, GORGE);
-    snowMountainResult = getRegionResult(totalSnowMountain, SNOW_MOUNTAIN);
-    oasisResult = getRegionResult(totalOasis, OASIS);
-    woodlandResult = getRegionResult(totalWoodland, WOODLAND);
-    volcanoResult = getRegionResult(totalVolcano, VOLCANO);
-    desertResult = getRegionResult(totalDesert, DESERT);
-    rainForestResult = getRegionResult(totalRainForest, RAIN_FOREST);
-    coastResult = getRegionResult(totalCoast, COAST);
-    mountainRangeResult = getRegionResult(totalMountainRange, MOUNTAIN_RANGE);
-  });
+  plainResult = getRegionResult(totalPlain, PLAIN);
+  gorgeResult = getRegionResult(totalGorge, GORGE);
+  snowMountainResult = getRegionResult(totalSnowMountain, SNOW_MOUNTAIN);
+  oasisResult = getRegionResult(totalOasis, OASIS);
+  woodlandResult = getRegionResult(totalWoodland, WOODLAND);
+  volcanoResult = getRegionResult(totalVolcano, VOLCANO);
+  desertResult = getRegionResult(totalDesert, DESERT);
+  rainForestResult = getRegionResult(totalRainForest, RAIN_FOREST);
+  coastResult = getRegionResult(totalCoast, COAST);
+  mountainRangeResult = getRegionResult(totalMountainRange, MOUNTAIN_RANGE);
+
+  // Place correct message for type
+  giantJawResult = getTypeResult(totalGiantJaw, GIANT_JAW);
+  hardShellResult = getTypeResult(totalHardShell, HARD_SHELL);
+  flyingWingsResult = getTypeResult(totalFlyingWings, FLYING_WINGS);
+  agileResult = getTypeResult(totalAgile, AGILE);
+  deadlyPoisonResult = getTypeResult(totalDeadlyPoison, DEADLY_POISON);
+  solidBoneResult = getTypeResult(totalSolidBone, SOLID_BONE);
+  sharpClawResult = getTypeResult(totalSharpClaw, SHARP_CLAW);
+  fluffResult = getTypeResult(totalFluff, FLUFF);
 
   return {
     [PLAIN]: plainResult,
@@ -229,6 +290,14 @@ export const getCalculations = clatterData => {
     [RAIN_FOREST]: rainForestResult,
     [COAST]: coastResult,
     [MOUNTAIN_RANGE]: mountainRangeResult,
+    [GIANT_JAW]: giantJawResult,
+    [HARD_SHELL]: hardShellResult,
+    [FLYING_WINGS]: flyingWingsResult,
+    [AGILE]: agileResult,
+    [DEADLY_POISON]: deadlyPoisonResult,
+    [SOLID_BONE]: solidBoneResult,
+    [SHARP_CLAW]: sharpClawResult,
+    [FLUFF]: fluffResult,
     [ATK]: totalAttack,
     [CRIT]: totalCrit,
     [IMPALE]: totalImpale,

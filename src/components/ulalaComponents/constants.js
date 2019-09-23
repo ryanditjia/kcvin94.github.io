@@ -164,6 +164,70 @@ export const TYPES = [
   FLUFF,
 ];
 
+export const TYPE_DESCRIPTIONS = {
+  [GIANT_JAW]: {
+    description: [
+      'Attacks cast 1 bonus layer of the [Giant Jaw] effect. When 4 layers are stacked, next basic attack inflict bonus ',
+      ' ATK DMG',
+    ],
+    3: ['40%'],
+    6: ['124%'],
+    9: ['188%'],
+  },
+  [FLUFF]: {
+    description: ["Increase each battle's "],
+    3: ['initial energy +1'],
+  },
+  [HARD_SHELL]: {
+    description: [
+      'Activate the Hard Shell effect every ',
+      ' attacks and obtain 1 layer of shield of ',
+      " of the Pet's Protection. Up to 3 layers can be stacked",
+    ],
+    2: ['4', '50%'],
+    4: ['4', '100%'],
+    6: ['3', '150%'],
+  },
+  [FLYING_WINGS]: {
+    description: [
+      'While entering the battlefield, the Flying Wing card will cause ',
+    ],
+    3: ['ATK +20% and Impale +600'],
+    6: ['ATK +40% and Impale +1200'],
+  },
+  [AGILE]: {
+    description: [
+      'Activate the Agile effect every ',
+      ' attacks and restore the HP for ',
+      ' within 3 seconds',
+    ],
+    3: ['4', 'Symbiosis +8%'],
+    6: ['3', 'Symbiosis +16%'],
+    9: ['3', 'Symbiosis +24%'],
+  },
+  [DEADLY_POISON]: {
+    description: [
+      'While entering the battlefield, transform 1 random enemy unit into a pig with the transformation lasting ',
+      ' second',
+    ],
+    3: ['1'],
+  },
+  [SOLID_BONE]: {
+    description: [
+      "Trigger the Solid Bone effect every 4 attacks. The healer's basic attack's ",
+    ],
+    3: ['healing effect +75%'],
+    6: ['healing effect +150%'],
+  },
+  [SHARP_CLAW]: {
+    description: [
+      'While entering the battlefield, the Sharp Claw card will cause ',
+      ' and ',
+    ],
+    3: ['HP +30%', 'ATK +30%'],
+  },
+};
+
 // Attributes
 export const ATK = 'ATK';
 export const HP = 'HP';
