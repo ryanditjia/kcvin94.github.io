@@ -65,12 +65,22 @@ class UlalaClatterSimulator extends React.Component {
 
         <div css={BodyWrapperStyle}>
           <div css={HeaderWrapperStyle}>
-            <Display align="center" fontSize={24}>Ulala Clatter Card Simulator V.0</Display>{' '}
+            <Display align="center" fontSize={24}>
+              Ulala Clatter Card Simulator V.0
+            </Display>{' '}
             <Display align="center" fontSize={14} color="rgba(0, 0, 0, 0.5)">
               By Delighte & Jelighte (NA Server 1 Allosaurus)
             </Display>
             <Display align="center" fontSize={12} color="rgba(0, 0, 0, 0.3)">
               Last Updated: Sep 23, 2019
+            </Display>
+            <br />
+            <Display align="center" fontSize={13} color="rgba(0, 0, 0, 0.5)">
+              {'Click '}
+              <a href="https://docs.google.com/spreadsheets/d/1l-kDoWsE45-C6h1ejUWNtoShZ2_Oq5Xu_y3idrMdz6U/edit#gid=0">
+                here
+              </a>
+              {' for Ulala Clatter Chart (Google Sheets)'}
             </Display>
           </div>
 
