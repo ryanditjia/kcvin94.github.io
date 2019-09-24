@@ -17,6 +17,7 @@ export const BodyWrapperStyle = css`
   display: flex;
   flex-direction: column;
   flex: 1;
+  overflow: auto;
   overflow: overlay;
   box-shadow: 5px 0 20px rgba(0, 0, 0, 0.15);
   &::-webkit-scrollbar-track {

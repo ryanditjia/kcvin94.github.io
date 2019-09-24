@@ -4,6 +4,7 @@ import { BLACK } from '../../colors';
 export const ClatterResultsWrapperStyle = css`
   width: 25vw;
   min-width: 300px;
+  overflow: auto;
   overflow: overlay;
   display: grid;
   grid-auto-rows: min-content;

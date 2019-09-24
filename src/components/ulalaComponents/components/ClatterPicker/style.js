@@ -9,6 +9,7 @@ export const ClatterPickerWrapperStyle = css`
   width: 260px;
   box-shadow: 5px 0 20px rgba(0, 0, 0, 0.15);
   background-color: #eee;
+  overflow: auto;
   overflow: overlay;
   z-index: 1;
   padding: 20px;

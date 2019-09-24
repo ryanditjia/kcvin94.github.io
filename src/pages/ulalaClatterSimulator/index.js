@@ -66,13 +66,13 @@ class UlalaClatterSimulator extends React.Component {
         <div css={BodyWrapperStyle}>
           <div css={HeaderWrapperStyle}>
             <Display align="center" fontSize={24}>
-              Ulala Clatter Card Simulator V 1.0
+              Ulala Clatter Card Simulator V 1.01
             </Display>{' '}
             <Display align="center" fontSize={14} color="rgba(0, 0, 0, 0.5)">
               By Delighte & Jelighte (NA Server 1 Allosaurus)
             </Display>
             <Display align="center" fontSize={12} color="rgba(0, 0, 0, 0.3)">
-              Last Updated: Sep 23, 2019
+              Last Updated: Sep 24, 2019
             </Display>
             <br />
             <Display align="center" fontSize={13} color="rgba(0, 0, 0, 0.5)">

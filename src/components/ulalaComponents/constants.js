@@ -456,20 +456,20 @@ const LAVA_BEAST = {
   type: SOLID_BONE,
   oneStar: [
     {
-      attribute: HP,
-      value: 1500,
+      attribute: ATK,
+      value: 300,
     },
   ],
   twoStar: [
     {
-      attribute: HP,
-      value: 3000,
+      attribute: ATK,
+      value: 600,
     },
   ],
   threeStar: [
     {
-      attribute: HP,
-      value: 9000,
+      attribute: ATK,
+      value: 1800,
     },
   ],
   bonus: null,
