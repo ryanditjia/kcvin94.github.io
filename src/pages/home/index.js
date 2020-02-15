@@ -3,11 +3,13 @@ import { Link } from 'gatsby';
 import { Container, Layout, Logo } from 'components';
 
 class Home extends React.Component {
-  render () {
+  render() {
     return (
       <Layout>
         <Container>
-          <Logo scale={0.5} />
+          <Link to="/budget">
+            <Logo scale={0.5} />
+          </Link>
         </Container>
         <Container>
           <Link to="/ulalaClatterSimulator">Ulala Clatter Simulator</Link>

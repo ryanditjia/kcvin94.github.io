@@ -27,7 +27,7 @@ module.exports = {
     "space-before-function-paren": [
       "error",
       {
-        named: "always",
+        named: "never",
         anonymous: "always",
         asyncArrow: "always",
       },
