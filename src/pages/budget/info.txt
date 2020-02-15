@@ -1,0 +1,62 @@
+[i] = Input
+[c] = Calculated
+- = Negative Amount
++ = Positive Amount
+
+Payslip Info Section
+Money deposited to chiba bank
+[i] + Gross Income
+[i] + Daily Wage
+[i] + Num of Days Worked
+[c] + Total from Daily Wage * Num of Days Worked
+[i] - Travel Expenses
+[i] - Employment Insurance
+[i] - Pension & Health
+[i] - Tax
+[i] - Residents Tax
+[c] + Total Net Income
+[i] + Total Net Income
+
+Budgeting Section
+Money withdrawn from chiba bank
+Each of the following has estimated & actual values (with dif calc of them)
+[i] UK
+[i] Spending Money
+[i] Gas
+[i] Water
+[i] Petrol
+[i] Food
+[c] - Last month's Budgeting Diff
+Line pay stuff:
+[i] Phone
+[i] Amazon
+[i] Electric
+[i] Play Music
+[c] Line pay total
+[c] Bills total
+
+Money to JP Bank
+[c] UK + Spending Money + Line pay total
+
+Savings
+[c] Total Net Income - Budgeting Est
+
+Total Budgeting Diff of this month
+[c] Budgeting Diff
+
+
+
+
+
+1. (optional) Adjust budget amount (basically UK part)
+2. On the 15th, get paid & enter the Total Net Income
+3. Withdraw budget amount from chiba bank
+4. Deposit UK, Spending Money, and Line pay total to jp bank
+5. 
+
+
+
+
+
+
+

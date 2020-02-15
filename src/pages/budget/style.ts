@@ -13,8 +13,9 @@ export const BudgetWrapperStyle = css`
 `;
 
 export const BudgetContentStyle = css`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-gap: 10px;
   min-width: 240px;
   width: 50%;
   max-width: 600px;

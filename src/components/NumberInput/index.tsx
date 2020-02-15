@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { NumberInputStyle } from './style';
 
-export default function NumberInput({ value, onChange }) {
+interface Props {
+  value: any;
+  onChange: Function;
+}
+
+export default function NumberInput({ value, onChange }: Props) {
   return (
     <input
       css={NumberInputStyle}

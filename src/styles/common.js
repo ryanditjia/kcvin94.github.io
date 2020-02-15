@@ -1,5 +1,5 @@
 export const colors = {
-  BLACK: 'hsla(0, 0%, 50%, 1)',
+  BLACK: 'hsla(0, 0%, 40%, 1)',
   WHITE: 'hsla(0, 0%, 100%, 1)',
   OFF_WHITE: 'hsla(0, 0%, 95%, 1)',
 
@@ -18,8 +18,15 @@ export const colors = {
   PINK: '#FBE7EB',
 };
 
+export const fontSizes = {
+  SMALL: 'font-size: 0.9em',
+  MAIN: 'font-size: 1em',
+  LARGE: 'font-size: 1.2em',
+};
+
 export const borderRadiuses = {
   CONTAINER: 'border-radius: 10px',
+  INPUT: 'border-radius: 5px',
 };
 
 export const shadows = {
