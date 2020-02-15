@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BudgetWrapperStyle } from './style';
+import { BudgetWrapperStyle, BudgetContentStyle } from './style';
 
 export function Label({ children }) {
   return <p>{children}</p>;
@@ -30,29 +30,35 @@ export default function Budget() {
     budgetValues.employmentInsurance;
 
   return (
-    <div className={BudgetWrapperStyle}>
-      <Label>Gross Income</Label>
-      <NumberInput
-        value={budgetValues.grossIncome}
-        onChange={newValue => setBudgetValues({ ...budgetValues, grossIncome: newValue })}
-      />
+    <div css={BudgetWrapperStyle}>
+      <div css={BudgetContentStyle}>
+        <Label>Gross Income</Label>
+        <NumberInput
+          value={budgetValues.grossIncome}
+          onChange={newValue =>
+            setBudgetValues({ ...budgetValues, grossIncome: newValue })
+          }
+        />
 
-      <Label>Travel Expenses</Label>
-      <NumberInput
-        value={budgetValues.travelExpenses}
-        onChange={newValue => setBudgetValues({ ...budgetValues, travelExpenses: newValue })}
-      />
+        <Label>Travel Expenses</Label>
+        <NumberInput
+          value={budgetValues.travelExpenses}
+          onChange={newValue =>
+            setBudgetValues({ ...budgetValues, travelExpenses: newValue })
+          }
+        />
 
-      <Label>Employment Insurance</Label>
-      <NumberInput
-        value={budgetValues.employmentInsurance}
-        onChange={newValue =>
-          setBudgetValues({ ...budgetValues, employmentInsurance: newValue })
-        }
-      />
+        <Label>Employment Insurance</Label>
+        <NumberInput
+          value={budgetValues.employmentInsurance}
+          onChange={newValue =>
+            setBudgetValues({ ...budgetValues, employmentInsurance: newValue })
+          }
+        />
 
-      <Label>Total Net Income</Label>
-      {totalNetIncome}
+        <Label>Total Net Income</Label>
+        {totalNetIncome}
+      </div>
     </div>
   );
 }

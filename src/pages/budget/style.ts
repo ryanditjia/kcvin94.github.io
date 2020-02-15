@@ -1,14 +1,25 @@
 import { css } from '@emotion/core';
+import { colors, borderRadiuses, shadows } from 'styles/common';
 
 export const BudgetWrapperStyle = css`
   display: flex;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
-  box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.05);
-  & * {
-    box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  }
+  background-color: ${colors.PINK};
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 20px 0;
+`;
+
+export const BudgetContentStyle = css`
+  display: flex;
+  flex-direction: column;
+  min-width: 240px;
+  width: 50%;
+  max-width: 600px;
+  background-color: ${colors.WHITE};
+  ${borderRadiuses.CONTAINER};
+  ${shadows.CONTAINER};
+  padding: 20px;
 `;

@@ -1,6 +1,6 @@
 import Container from './Container';
 import Layout from './Layout';
 import Logo from './Logo';
-import Navbar from './Navbar';
+import NumberInput from './NumberInput';
 
-export { Container, Layout, Logo, Navbar };
+export { Container, Layout, Logo, NumberInput };

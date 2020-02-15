@@ -11,9 +11,6 @@ class Home extends React.Component {
             <Logo scale={0.5} />
           </Link>
         </Container>
-        <Container>
-          <Link to="/ulalaClatterSimulator">Ulala Clatter Simulator</Link>
-        </Container>
       </Layout>
     );
   }

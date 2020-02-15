@@ -14,6 +14,8 @@ export const colors = {
   CORAL_DARK1: 'hsla(11, 87%, 72%, 1)',
   CORAL_DARK2: 'hsla(11, 87%, 68%, 1)',
   CORAL_DARK3: 'hsla(11, 87%, 64%, 1)',
+
+  PINK: '#FBE7EB',
 };
 
 export const borderRadiuses = {
@@ -21,5 +23,5 @@ export const borderRadiuses = {
 };
 
 export const shadows = {
-  HEADER: 'box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1)',
+  CONTAINER: 'box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1)',
 };
