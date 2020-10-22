@@ -4,16 +4,15 @@
 
 https://kcvin94.github.io/
 
-## Things I'm using :)
+## Stack
 
 - **Gatsby**
 - **React**
-- **VS Code**
 - **Emotion**
 - **Typography**
 - **Typescript**
 
-## Stuff for me :U
+## Instructions
 
 `yarn develop`
 `npm run deploy`
