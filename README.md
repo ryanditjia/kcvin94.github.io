@@ -13,6 +13,10 @@ https://kcvin94.github.io/
 - **Typescript**
 
 ## Instructions
+To run on local
 
 `yarn develop`
+
+To deploy to master
+
 `npm run deploy`
