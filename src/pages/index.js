@@ -52,7 +52,7 @@ class UlalaClatterSimulator extends React.Component {
     }
   };
 
-  render () {
+  render() {
     const { clatterData } = this.state;
     const placeholders = [];
     for (let i = clatterData.length + 1; i < 10; i++) {
