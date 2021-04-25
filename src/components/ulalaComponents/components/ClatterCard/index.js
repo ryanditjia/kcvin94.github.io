@@ -60,19 +60,19 @@ const ClatterCard = ({ clatter, deleteClatter, chooseStar }) => {
             onClick={() => chooseStar('oneStar')}
             css={StarButtonStyle(star === 'oneStar')}
           >
-            🟊
+            ⭐
           </button>
           <button
             onClick={() => chooseStar('twoStar')}
             css={StarButtonStyle(star === 'twoStar')}
           >
-            🟊🟊
+            ⭐⭐
           </button>
           <button
             onClick={() => chooseStar('threeStar')}
             css={StarButtonStyle(star === 'threeStar')}
           >
-            🟊🟊🟊
+            ⭐⭐⭐
           </button>
         </div>
 
@@ -89,9 +89,12 @@ const ClatterCard = ({ clatter, deleteClatter, chooseStar }) => {
           ))}
         </div>
 
-        {bonus && <div css={BonusInfoStyle}>
-          <Label align="center">BONUS</Label>
-          {bonus}</div>}
+        {bonus && (
+          <div css={BonusInfoStyle}>
+            <Label align="center">BONUS</Label>
+            {bonus}
+          </div>
+        )}
       </div>
     </div>
   );

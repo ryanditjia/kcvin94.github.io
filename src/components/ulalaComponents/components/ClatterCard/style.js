@@ -89,7 +89,7 @@ export const StarButtonStyle = isActive => css`
   justify-content: center;
   flex: 1;
   height: 30px;
-  font-size: 20px;
+  font-size: 15px;
   border: none;
   background: none;
   outline: none;
